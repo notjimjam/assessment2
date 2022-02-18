@@ -61,10 +61,15 @@ const summedPrice = cartMap.reduce(function(acc, curr){
 */
 
 //CODE HERE
-function calcFinalPrice(cartTotal, couponValue, tax) {
-    return 
-}
+// function calcFinalPrice(cartTotal, couponValue, tax) {
+//     return 
+// }
 
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    let finalPrice = (cartTotal * (1 + tax) - couponValue).toFixed(2)
+    return finalPrice
+}
+console.log(calcFinalPrice(15, 3, .08))
 
 //////////////////PROBLEM 3////////////////////
 /*  
