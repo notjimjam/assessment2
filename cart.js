@@ -122,5 +122,5 @@ const customCart = {
     name: "Western Burger",
     cost: 14.99,
     discount: true,
-    sides: "Sweet Potatoes fries"
+    sides: "Sweet Potato fries"
 }
