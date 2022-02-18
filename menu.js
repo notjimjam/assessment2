@@ -152,10 +152,15 @@ const foodArr = [
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-const filteredFood = foodArr.filter(function(elem){
-    return tags
+const filteredFood = foodArr.filter((item) => {
+    // console.log(item.tags)
+    return item.tags.includes('favorites')
 })
+console.log(filteredFood)
+
+// const filteredFood = foodArr.filter(function(elem){
+//     return tags
+// })
 // console.log(filteredFood)
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -189,7 +194,7 @@ const filteredFood = foodArr.filter(function(elem){
         if it is, return objects whose value for the given
         property is greater than the `number` passed in
 
-        If the type isn't `below`, return objects whose
+        If the type is `below`, return objects whose
         value for the given property is less than the 
         `number` passed in
     
@@ -198,8 +203,24 @@ const filteredFood = foodArr.filter(function(elem){
 
 //CODE HERE
 function filterByProperty(property, number, type){
-    
+
 }
+const filterByProperty = (property, number, type) => {
+    const filtered = foodArr.filter((element) => {
+        if(type === "above") {
+           if(element[property] > number) {
+               return true
+           } else {
+               
+           }
+        }
+    })
+
+    return filtered
+}
+// filterByProperty("price", number, "above/below") {
+//     price >/< number given
+// }
 
 /*
     Invoke the `filterByProperty` function passing

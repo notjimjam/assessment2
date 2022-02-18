@@ -126,8 +126,8 @@ const deals = [
 */
 
 //CODE HERE
-const newDeal = deals.replace('15', '10')
-// console.log(newDeal)
+const newDeal = deals[0]['title'].replace('15', '10')
+console.log(newDeal)
 
 
 /*
@@ -145,5 +145,5 @@ const newDeal = deals.replace('15', '10')
 
 //CODE HERE
 
-const newMonth = deals.replace('March', 'April')
-// console.log(newMonth)
+const newMonth = deals[1].desc.replace('March', 'April')
+console.log(newMonth)
