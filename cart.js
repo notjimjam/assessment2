@@ -34,9 +34,16 @@ const cart = [
 ]
 
 //CODE HERE
+const cartMap = cart.map(function(cost){
+    return cost.price
+})
+// console.log(cartMap)
 
+const summedPrice = cartMap.reduce(function(acc, curr){
+    return acc + curr
+})
 // const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
+// console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -54,7 +61,9 @@ const cart = [
 */
 
 //CODE HERE
-
+function calcFinalPrice(cartTotal, couponValue, tax) {
+    return 
+}
 
 
 //////////////////PROBLEM 3////////////////////
@@ -79,6 +88,27 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
+    The object will contain the name of the item, the cost of the item,
+    discounts added to the item, and what sides are included with the item
+    
+    Why included:
+    Name is needed to show the customer the item they are ordering
+    Cost is to show how much they are paying for the item
+    Discounts are included to show the customer if the item is on sale
+        or a coupon was able to the price. Who doesn't love a good deal?
+    Sides are shown so the customer knows what is going along with the item
+        they ordered and allows them to change it before checkout
+    
+    Data types:
+    Name will be string- shown as a string because it will be display
+        the product name
+    Cost will be number -- price are typically display as a number
+    Discounts will be a boolean -- it will display whether or not the customer
+        has a dicount added to the order. If true, it will display the discounts.
+        If false, it will not display anything for the discount section
+    Sides will be a string- written as a string because it could more than 
+        one word 
+
 
 */
 
@@ -88,3 +118,9 @@ const cart = [
 */
 
 //CODE HERE
+const customCart = {
+    name: "Western Burger",
+    cost: 14.99,
+    discount: true,
+    sides: "Sweet Potatoes fries"
+}
