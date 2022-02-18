@@ -97,7 +97,45 @@ let {category} = pizza
 */
 
 //CODE HERE
-const foodArr = [{"price":15.99},{"popularity": 9}]
+const foodArr = [
+    {
+        name: 'burger', 
+        price: 10.99,
+        popularity: 9,
+        rating: 5,
+        tags: ["kids", "favorites"]
+    }, 
+    {
+        name: 'pasta', 
+        price: 8.99,
+        popularity: 4,
+        rating: 3,
+        tags: ["kids", "gluten free option"]
+
+    }, 
+    {
+        name: 'salad', 
+        price: 7.99,
+        popularity: 6,
+        rating: 4,
+        tags: ["gluten free option", "vegetarian"]
+    },
+    {
+       name: 'sandwich' ,
+       price: 9.99,
+       popularity: 8,
+       rating: 5,
+       tags: ["kids", "favorites", "gluten free option"]
+    },
+    {
+        name: 'steak', 
+        price: 15.99,
+        popularity: 8,
+        rating: 3,
+        tags: ["gluten free option", "favorites"]
+    }
+]
+
 
 
 //////////////////PROBLEM 4////////////////////
@@ -115,8 +153,10 @@ const foodArr = [{"price":15.99},{"popularity": 9}]
 //CODE HERE
 
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-const filteredFood = foodArr.filter
-
+const filteredFood = foodArr.filter(function(elem){
+    return tags
+})
+// console.log(filteredFood)
 //////////////////PROBLEM 5////////////////////
 /* 
     Now let's write a function that's a little
@@ -157,7 +197,9 @@ const filteredFood = foodArr.filter
 */
 
 //CODE HERE
-
+function filterByProperty(property, number, type){
+    
+}
 
 /*
     Invoke the `filterByProperty` function passing
