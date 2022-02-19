@@ -203,20 +203,30 @@ const filteredFood = foodArr.filter(function(elem){
 */
 
 //CODE HERE
+// function filterByProperty(property, number, type){
+//     const filteredArr = foodArr.filter(function(element){
+//         if(type === "above") {
+//             if(element[property] > number) {
+//                 return true
+//             }
+//         } else if(type === "below") {
+//             if(element[property] < number) {
+//                 return false
+//             }
+//         } 
+//     }) 
+//     return filteredArr
+// } 
 function filterByProperty(property, number, type){
     const filteredArr = foodArr.filter(function(element){
         if(type === "above") {
-            if(element[property] > number) {
-                return true
-            }
+            return element[property] > number
         } else if(type === "below") {
-            if(element[property] <= number) {
-                return false
+            return element[property] < number
             }
-        } 
-    }) 
-    return filteredArr
-} 
+        })
+        return filteredArr 
+    }
 
 /*
 Invoke the `filterByProperty` function passing
@@ -226,4 +236,4 @@ You'll have to console.log to see the filtered array
 */
                        
 //CODE HERE
-console.log(filterByProperty("rating", 3, 'above'))
+console.log(filterByProperty("popularity", 8, 'below'))
