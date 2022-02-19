@@ -64,9 +64,13 @@ let empOne = new Employee('Jess', 'weekday mornings, weekday afternoons')
 */
 
 //CODE HERE
-const empTwo = {...empOne}
-empTwo.name = "Nick"
-// console.log(empTwo)
+//inline
+const empTwo = {...empOne, name: "Nick"}
+
+//using bracket notation
+// const empTwo = {...empOne}
+// empTwo['name'] = "Nick"
+console.log(empTwo)
 
 
 //////////////////PROBLEM 2////////////////////

@@ -42,8 +42,12 @@ const cartMap = cart.map(function(cost){
 const summedPrice = cartMap.reduce(function(acc, curr){
     return acc + curr
 })
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
-// console.log(summedPrice)
+console.log(summedPrice)
+
+// below code didn't work
+// const summedPrice = cart[0]['price'].reduce(function(acc, curr){
+//     return acc + curr
+// })
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -61,15 +65,16 @@ const summedPrice = cartMap.reduce(function(acc, curr){
 */
 
 //CODE HERE
-// function calcFinalPrice(cartTotal, couponValue, tax) {
-//     return 
-// }
-
-const calcFinalPrice = (cartTotal, couponValue, tax) => {
+function calcFinalPrice(cartTotal, couponValue, tax) {
     let finalPrice = (cartTotal * (1 + tax) - couponValue).toFixed(2)
     return finalPrice
 }
-console.log(calcFinalPrice(15, 3, .08))
+
+// const calcFinalPrice = (cartTotal, couponValue, tax) => {
+//     let finalPrice = (cartTotal * (1 + tax) - couponValue).toFixed(2)
+//     return finalPrice
+// }
+// console.log(calcFinalPrice(15, 3, .08))
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -108,9 +113,8 @@ console.log(calcFinalPrice(15, 3, .08))
     Name will be string- shown as a string because it will be display
         the product name
     Cost will be number -- price are typically display as a number
-    Discounts will be a boolean -- it will display whether or not the customer
-        has a dicount added to the order. If true, it will display the discounts.
-        If false, it will not display anything for the discount section
+    Discounts will be a number -- it will give the opportunity to use a percentage or 
+        a dollar amount as the discount to be taken off the total cost
     Sides will be a string- written as a string because it could more than 
         one word 
 
@@ -126,6 +130,6 @@ console.log(calcFinalPrice(15, 3, .08))
 const customCart = {
     name: "Western Burger",
     cost: 14.99,
-    discount: true,
+    discount: 3,
     sides: "Sweet Potato fries"
 }

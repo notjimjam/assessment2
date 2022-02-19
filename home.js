@@ -14,7 +14,7 @@
     It should have one parameter, `username`
     The function should return a string that says: 
     'Welcome back, [USERNAME]'
-    Where USERNAME is the `username` arguement sent in
+    Where USERNAME is the `username` argument sent in
 
     For example, if called with `Andrew` as the 
     argument, `greetUser` should return the string:
@@ -56,11 +56,11 @@ function canWeDeliver(zipCode) {
     if(deliveryAreaZipCodes.includes(zipCode)) {
         return "You're in our delivery zone!"
     } else {
-        return "Sorry, we can't delivery to that address"
+        return "Sorry, we can't delivery to that area"
     }
 }
 
-// console.log(canWeDeliver(85205))
+// console.log(canWeDeliver(85905))
 
 
 /* 
@@ -127,7 +127,7 @@ const deals = [
 
 //CODE HERE
 const newDeal = deals[0]['title'].replace('15', '10')
-console.log(newDeal)
+// console.log(newDeal)
 
 
 /*
@@ -146,4 +146,4 @@ console.log(newDeal)
 //CODE HERE
 
 const newMonth = deals[1].desc.replace('March', 'April')
-console.log(newMonth)
+// console.log(newMonth)

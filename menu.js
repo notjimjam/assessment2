@@ -37,7 +37,7 @@ const pizza = {
     category: "entree",
     popularity: 8,
     rating: 4.5,
-    tags: ["kids", "classic"]
+    tags: ["kids", "classic", "favorites"]
 }
 
 
@@ -151,16 +151,17 @@ const foodArr = [
 */
 
 //CODE HERE
-
-const filteredFood = foodArr.filter((item) => {
-    // console.log(item.tags)
-    return item.tags.includes('favorites')
-})
-console.log(filteredFood)
-
-// const filteredFood = foodArr.filter(function(elem){
-//     return tags
+//arrow function
+// const filteredFood = foodArr.filter((item) => {
+//     // console.log(item.tags)
+//     return item.tags.includes('kids')
 // })
+// console.log(filteredFood)
+
+//function declaration
+const filteredFood = foodArr.filter(function(elem){
+    return elem.tags.includes('favorites')
+})
 // console.log(filteredFood)
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -203,30 +204,26 @@ console.log(filteredFood)
 
 //CODE HERE
 function filterByProperty(property, number, type){
-
-}
-const filterByProperty = (property, number, type) => {
-    const filtered = foodArr.filter((element) => {
+    const filteredArr = foodArr.filter(function(element){
         if(type === "above") {
-           if(element[property] > number) {
-               return true
-           } else {
-               
-           }
-        }
-    })
-
-    return filtered
-}
-// filterByProperty("price", number, "above/below") {
-//     price >/< number given
-// }
+            if(element[property] > number) {
+                return true
+            }
+        } else if(type === "below") {
+            if(element[property] <= number) {
+                return false
+            }
+        } 
+    }) 
+    return filteredArr
+} 
 
 /*
-    Invoke the `filterByProperty` function passing
-    in a value for each paramter.
-
-    You'll have to console.log to see the filtered array
+Invoke the `filterByProperty` function passing
+in a value for each parameter.
+                        
+You'll have to console.log to see the filtered array
 */
-
+                       
 //CODE HERE
+console.log(filterByProperty("rating", 3, 'above'))
